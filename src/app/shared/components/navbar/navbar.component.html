@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg nav-bg">
-    <div class="container-fluid" style="margin-top: 6px;margin-bottom: 6px;">
+    <div class="container-fluid mt-2 mb-2">
       <!-- <a class="navbar-brand" href="#">Navbar</a> -->
       <img class="" alt="logo" src="../../../../assets/images/logo-scg.png" height="50">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,19 +9,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link me-4 ms-4 active-link" mat-button href="home">
+            <a style="width: 95%;" [ngClass]="{'active-link': currentPathname === 'home'}" class="nav-link me-3 ms-3" mat-button href="home">
                 <img class="logo" src="../../../../assets/icons/home.png" height="30">
             </a>
             <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link me-2 ms-2" mat-button href="#">User Management</a>
+            <a style="width: 95%;" [ngClass]="{'active-link': currentPathname === 'user-management'}" class="nav-link me-3 ms-3" mat-button href="user-management/table">User Management</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link me-2 ms-2" mat-button href="#">Role Management</a>
+            <a style="width: 95%;" [ngClass]="{'active-link': currentPathname === 'role-management'}" class="nav-link me-3 ms-3" mat-button href="role-management/table">Role Management</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link me-2 ms-2" mat-button href="#">Complant</a>
+            <a style="width: 95%;" [ngClass]="{'active-link': currentPathname === 'complaint'}" class="nav-link me-3 ms-3" mat-button href="complaint/table">Complant</a>
           </li>
         </ul>
         <form class="d-flex">

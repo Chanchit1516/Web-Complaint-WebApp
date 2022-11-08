@@ -33,10 +33,10 @@ const routes: Routes = [
         path: 'user-management',
         loadChildren: () => import('@modules/user-management/user-management.module').then(m=>m.UserManagementModule)
       },
-      // {
-      //   path: 'user-management',
-      //   loadChildren: () => import('@modules/user-management/form/form.module').then(m=>m.FormModule)
-      // }
+      {
+        path: 'role-management',
+        loadChildren: () => import('@modules/role-management/role-management.module').then(m=>m.RoleManagementModule)
+      }
     ]
   }
 ];
