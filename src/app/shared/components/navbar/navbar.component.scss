@@ -1,0 +1,19 @@
+.nav-bg{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.active-link{
+    background-color: #FF0000;
+    color: white;
+    img {
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+}
+
+a.nav-link{
+    font-size: 18px;
+    // width: 70%;
+    // max-width: 120px;
+}
