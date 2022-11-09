@@ -1,1 +1,61 @@
-<p>table works!</p>
+<div class="card border-light">
+  <div class="card-header">
+    <h3>Search Users</h3>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card border-light mt-4">
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-primary" type="button">
+            <fa-icon [icon]="faPlus"></fa-icon> Add
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <p-table>
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="code">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Code</span>
+                <div style="display: flex">
+                  <div class="flex flex-row justify-between">
+                    <p-sortIcon field="code"></p-sortIcon>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon>
+            </th>
+            <th pSortableColumn="category">Category <p-sortIcon field="category"></p-sortIcon>
+            </th>
+            <th pSortableColumn="quantity">Quantity <p-sortIcon field="quantity"></p-sortIcon>
+            </th>
+            <th pSortableColumn="price">Price <p-sortIcon field="price"></p-sortIcon>
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price | currency: 'USD'}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</div>

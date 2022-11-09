@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import {
+  faUser,
+  faRightFromBracket
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +15,11 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   currentPathname: string = '';
 
-  constructor() { }
+  //icon
+  faUser = faUser;
+  faRightFromBracket = faRightFromBracket;
+
+  constructor() {}
 
   ngOnInit(): void {
     let pathname: string = location.pathname.split('/')[1];

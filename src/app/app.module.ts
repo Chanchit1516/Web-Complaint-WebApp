@@ -10,8 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MainLayoutComponent } from './shared/layout/main-layout/main-layout.component';
 import { LoginLayoutComponent } from './shared/layout/login-layout/login-layout.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { FormComponent } from './pages/role-management/form/form.component';
-import { TableComponent } from './pages/role-management/table/table.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,14 +19,13 @@ import { TableComponent } from './pages/role-management/table/table.component';
     MainLayoutComponent,
     LoginLayoutComponent,
     NavbarComponent,
-    FormComponent,
-    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialUi
+    MaterialUi,
+    FontAwesomeModule
   ],
   providers: [
     {

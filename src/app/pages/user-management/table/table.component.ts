@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild
+} from '@angular/core';
+import {
+  faPlus
+} from '@fortawesome/free-solid-svg-icons';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-table',
@@ -6,10 +14,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+  @ViewChild(Table) table!: Table;
 
-  constructor() { }
+  //icon
+  faPlus = faPlus;
 
-  ngOnInit(): void {
-  }
+  constructor() {}
+
+  ngOnInit(): void {}
 
 }
