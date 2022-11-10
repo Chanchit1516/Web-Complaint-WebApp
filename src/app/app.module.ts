@@ -9,8 +9,10 @@ import { CustomHttpInterceptor } from '@core/interceptor/http.interceptor';
 import { HomeComponent } from './pages/home/home.component';
 import { MainLayoutComponent } from './shared/layout/main-layout/main-layout.component';
 import { LoginLayoutComponent } from './shared/layout/login-layout/login-layout.component';
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     MainLayoutComponent,
     LoginLayoutComponent,
-    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialUi,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgSelectModule,
+    FormsModule,
+    SharedModule
   ],
   providers: [
     {

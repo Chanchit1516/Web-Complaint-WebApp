@@ -35,6 +35,9 @@
       "@constants/*": [
         "src/app/core/constants/*"
       ],
+      "@models/*": [
+        "src/app/core/models/*"
+      ],
       "@env": [
         "src/environments/environment.ts"
       ],

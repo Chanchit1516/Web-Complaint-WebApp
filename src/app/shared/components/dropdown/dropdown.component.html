@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label class="form-label">{{label}}
+    <span *ngIf="required" class="text-danger ml-1">*</span>
+  </label>
+  <ng-select [ngClass]="{'input-shake': isInvalid}" [readonly]="readonly" [items]="items" bindLabel="text" [placeholder]="placeholder" [formControl]="formControl" appendTo="body"
+    [multiple]="isMultiSelect" [(ngModel)]="selected" [searchable]="searchable" (change)="dropdownChangeValue($event)">
+  </ng-select>
+  <div *ngIf="isInvalid" class="text-danger mt-1">
+    {{errorText}}
+  </div>
+</div>

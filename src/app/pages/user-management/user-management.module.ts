@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { UserManagementRoutingModule } from './user-management-routing.module';
 import { TableComponent } from './table/table.component';
 import { FormComponent } from './form/form.component';
+import { SharedModule } from '@shared/shared.module';
+import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TableModule } from 'primeng/table';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     TableComponent,
-    FormComponent
+    FormComponent,
   ],
   imports: [
-    CommonModule,
     UserManagementRoutingModule,
+    SharedModule,
+    CommonModule,
     FontAwesomeModule,
-    TableModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UserManagementModule { }

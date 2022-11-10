@@ -2,13 +2,32 @@
   <div class="card-header">
     <h3>Search Users</h3>
   </div>
-  <div class="card-body">
-    <div class="row">
-      <div class="col">
-        <input type="text" class="form-control">
+  <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-6">
+          <app-dropdown label="BUs" placeholder="Select" [formControl]="formControls.buId" [items]="items"
+            [isMultiSelect]="true" [submitted]="submitted" ngDefaultControl errorText="Please Input BUs"
+            (onDropdownChangeValue)="dropdownChangeValue($event)">
+          </app-dropdown>
+        </div>
+        <div class="col-sm-6">
+          <app-form-input label="User Name" placeholder="User Name" [formControl]="formControls.userName"
+            errorText="Please Input User Name" type="text" ngDefaultControl [submitted]="submitted" (onInputChangeValue)="inputChangeValue($event)">
+          </app-form-input>
+        </div>
+      </div>
+      <div class="row mt-2 mb-3">
+        <div class="col-sm">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="button" class="btn btn-outline-secondary" (click)="onReset()">Clear</button>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
+  </form>
 </div>
 
 <div class="card border-light mt-4">
@@ -23,7 +42,7 @@
       </div>
     </div>
     <div class="row mt-3">
-      <p-table>
+      <!-- <p-table>
         <ng-template pTemplate="header">
           <tr>
             <th pSortableColumn="code">
@@ -55,7 +74,7 @@
             <td>{{product.price | currency: 'USD'}}</td>
           </tr>
         </ng-template>
-      </p-table>
+      </p-table> -->
     </div>
   </div>
 </div>

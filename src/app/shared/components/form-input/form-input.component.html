@@ -1,0 +1,10 @@
+<div class="form-group">
+  <label class="form-label">{{label}}
+    <span *ngIf="required" class="text-danger ml-1">*</span>
+  </label>
+  <input [id]="id" class="form-control" [ngClass]="{'input-shake': isInvalid}" [type]="type" [formControl]="formControl"
+    [placeholder]="placeholder" autocomplete="off" (input)="inputChangeValue($event)"/>
+  <div *ngIf="isInvalid" class="text-danger mt-1">
+    {{errorText}}
+  </div>
+</div>
