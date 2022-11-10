@@ -1,19 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
-html, body { height: 100%;background-color: #F9F9FC; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.card{
-    border-radius:15px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+html,
+body {
+  height: 100%;
+  background-color: #F9F9FC;
 }
 
-.card-body{
-    border-radius:15px;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.card-header{
-    border-radius:15px 15px 0px 0px !important;
-    background-color: white;
+.card {
+  border-radius: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card-body {
+  border-radius: 15px;
+}
+
+.card-header {
+  border-radius: 15px 15px 0px 0px !important;
+  background-color: white;
+}
+
+@keyframes shake {
+  25% {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  50% {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+
+  75% {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+.input-shake {
+  animation: shake 0.3s;
+  box-shadow: 0 0 0.8rem #ff7272 !important;
 }

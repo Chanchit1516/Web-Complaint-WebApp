@@ -27,7 +27,7 @@ import { FormInputComponent } from './components/form-input/form-input.component
     exports: [
         NavbarComponent,
         DropdownComponent,
-        FormInputComponent
+        FormInputComponent,
     ],
 })
 export class SharedModule { }

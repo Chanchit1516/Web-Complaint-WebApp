@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from '@shared/shared.module';
+import { SpinnerComponent } from '@shared/components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SharedModule } from '@shared/shared.module';
     HomeComponent,
     MainLayoutComponent,
     LoginLayoutComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

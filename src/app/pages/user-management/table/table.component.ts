@@ -9,6 +9,7 @@ import {
 import { Table } from 'primeng/table';
 import { FormControl, FormGroup, Validators, FormBuilder, AbstractControl } from '@angular/forms';
 import { DROPDOWN_MENU, DROPDOWN_MENU_SELECTED } from '@models/dropdown.model';
+import { SpinnerService } from '@core/services/spinner.service'
 
 @Component({
   selector: 'app-table',
@@ -19,8 +20,8 @@ export class TableComponent implements OnInit {
   @ViewChild(Table) table!: Table;
 
   searchForm: FormGroup = new FormGroup({
-    buId: new FormControl(''),
-    userName: new FormControl(''),
+    buId: new FormControl('' , Validators.required),
+    userName: new FormControl('', Validators.required),
     pageSize: new FormControl('10'),
     pageIndex: new FormControl('0'),
   });
@@ -32,7 +33,7 @@ export class TableComponent implements OnInit {
     pageIndex: '0',
   };
 
-  
+
 
   //icon
   faPlus = faPlus;
@@ -40,15 +41,17 @@ export class TableComponent implements OnInit {
 
   items: DROPDOWN_MENU[] = [];
   selected: DROPDOWN_MENU_SELECTED[] = []
-  submitted:boolean = false;
+  submitted: boolean = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+    private spinner: SpinnerService
+  ) { }
 
   ngOnInit(): void {
     this.initMaster();
   }
 
-  initMaster(){
+  initMaster() {
     this.items = [
       { value: 1, text: 'Python' },
       { value: 2, text: 'Node Js' },
@@ -66,13 +69,17 @@ export class TableComponent implements OnInit {
     ];
   }
 
-  dropdownChangeValue(event:any){
+  dropdownChangeValue(event: any) {
   }
 
-  inputChangeValue(event:any){
+  inputChangeValue(event: any) {
   }
 
   submitForm() {
+    // this.spinner.show();
+    // setTimeout(() => {
+    //   this.spinner.hide();
+    // }, 3000);
     this.submitted = true;
     if (this.searchForm.invalid) {
       return;
